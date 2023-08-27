@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+
+Index
+
+{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+<div class="form-container">
+<div class="input-group">
+    <p class="title">Welcome {{ user.first_name|default:user.username|title }}
+    </p>
+<a href="{% url 'change_password' %}" class="sign" style="width: 90%;">Change Password</a>
+<br>
+<a href="{% url 'logout' %}" class="sign" style="width: 90%;" >Logout</a>
+</div>
+</div>
+{% endblock content %}
